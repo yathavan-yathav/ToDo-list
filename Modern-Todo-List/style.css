@@ -1,0 +1,246 @@
+:root{
+    --VeryDarkBlue: hsl(235, 21%, 11%);
+    --VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+    --LightGrayishBlue: hsl(234, 39%, 85%);
+    --LightGrayishBlue: hsl(236, 33%, 92%);
+    --DarkGrayishBlue: hsl(234, 11%, 52%);
+    --VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+    --VeryDarkGrayishBlue: hsl(237, 14%, 26%);
+
+    --BrightBlue: hsl(220, 98%, 61%);
+    --CheckBackground: linear-gradient(hsl(192deg, 100%, 67%),hsl(280deg, 87%, 65%));
+}
+
+body{
+    margin: 0;
+    padding:0;
+    background-color: var(--VeryDarkBlue);
+    font-family:Josefin Sans;
+    
+}
+#todo{
+    background-image: url(Media/bg-desktop-dark.jpg);
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#todo h1{
+    width: 10vw;
+    font-size: 35px;
+    text-shadow: 5px 5px 10px black;
+    margin-top: 0;
+    color: var(--LightGrayishBlue);
+    letter-spacing: 8px;
+    font-weight: 900;
+    position:fixed;
+    top: 80px;
+    left: 36%;
+}
+#todo img{
+    position: absolute;
+    top:85px;
+    left: 62%;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -120px;
+}
+#todoInput{
+    width:413px;
+    height:35px;
+    background-color: var(--VeryDarkDesaturatedBlue);
+    color:var(--LightGrayishBlue);
+    font-family:Josefin Sans;
+    outline: none;
+    border-style:none;
+    padding-left: 40px;
+    border-radius: 10px;
+    
+}
+#todoInput::first-letter{
+    text-transform: capitalize;
+}
+#todoInput::placeholder{
+    font-size: 16px;
+    letter-spacing: 4px;
+    
+}
+
+.todoInput::placeholder{
+    color: red;
+}
+#input .todoInput{
+    border: 1px solid red;
+}
+#inputRadio{
+    position:absolute;
+    top: 12px;
+    margin-left: 8px;
+    color: aqua;
+    cursor: pointer;
+}
+#inputRadio :hover{
+    color: hsl(280deg, 87%, 65%);
+}
+#lowerLayer{
+    padding-top:1px;
+    background-color: var(--VeryDarkDesaturatedBlue);
+    margin-top: 15px;
+    width:454px;
+    border-radius: 10px;
+    
+}
+#noofList{
+    height: 350px;
+}
+.noofList {
+    overflow: auto;
+    overflow-y: scroll;
+}
+.noofList::-webkit-scrollbar {
+    width: 8px;
+}
+
+.noofList::-webkit-scrollbar-track {
+    background-color: var(--DarkGrayishBlue);
+    border-radius: 10px;
+    
+}
+
+.noofList::-webkit-scrollbar-thumb {
+    background-color: var(--VeryDarkDesaturatedBlue);
+    border-radius: 10px;
+}
+#noofList p{
+    padding:0px 10px 20px 20px;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--LightGrayishBlue);
+    margin: 2px;
+}
+#noofList .completedNow{
+    text-decoration: line-through;
+    text-decoration-thickness:3%;
+    color: var(--DarkGrayishBlue);
+}
+#noofList p::first-letter{
+    text-transform: capitalize;
+}
+#noofList hr{
+    margin:0;
+}
+#noofList i{
+    width:15px;
+    height:15px;
+    margin-left: 1%;
+    position: relative;
+    top: 24px;
+    left: 6px;
+    color: var(--DarkGrayishBlue);
+    cursor: pointer;
+}
+#noofList #nowCompleted{
+    color:red;
+}
+#buttons{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    padding-bottom:10px;
+    height: 20px;
+}
+
+#buttons a{
+    color: var(--DarkGrayishBlue);
+    font-size: 10px;
+    text-decoration:none;
+    font-weight: 700;
+}
+#buttons a:hover{
+    color:var(--LightGrayishBlue)
+}
+#buttons a:active{
+    color:var(--BrightBlue)
+}
+#first{
+    flex:1;
+    padding-left:10px;
+}
+#first p{
+    font-size: 12px;
+    color: var(--DarkGrayishBlue);
+    font-weight: 700;
+}
+#second{
+    position: relative;
+    top: 9px;
+}
+#second a{
+    flex:1; 
+    font-size: 12px;
+    padding:5px;
+    
+}
+#last{
+    flex:1;  
+    position: relative;
+    top: 9px;
+    left: 20px;
+}
+#last a{
+    font-size: 12px;
+}
+#noofList #todoPara{
+    margin-left: 20px;
+}
+#lastLine{
+    color: var(--VeryDarkGrayishBlue);
+    font-weight: 600;
+    margin-top: 50px;
+}
+.nightMood{
+
+}
+#body .dayMood{
+    background-image: url(Media/bg-desktop-light.jpg);
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    object-fit: cover;
+}
+.dayBody{
+    background-color: var(--LightGrayishBlue);
+}
+.dayTodo h1{
+    
+    text-shadow: 5px 5px 10px black;
+    color: var(--LightGrayishBlue);
+}
+#input .dayTodoInput{
+    
+    background-color: var(--LightGrayishBlue);
+    color:var(--VeryDarkDesaturatedBlue);
+    
+}
+#todoList .dayLowerLayer{
+    background-color: var(--LightGrayishBlue);
+    box-shadow: 5px 5px 20px black;
+}
+#lowerLayer .dayNoofList  p{
+    color: var(--VeryDarkDesaturatedBlue);
+}
+#container .dayLastLine{
+    color: var(--DarkGrayishBlue);
+}
+#input .dayInputRadio{
+    color: rgb(238, 1, 255);
+}
+#input .dayInputRadio :hover{
+    color: hsl(192deg, 100%, 67%);
+}
+#lowerLayer .dayButtons a:hover{
+    color:var(--VeryDarkBlue)
+}
